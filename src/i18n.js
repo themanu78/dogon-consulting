@@ -16,9 +16,9 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    fallbackLng: "gb",
+    fallbackLng: "en",
     debug: true,
   });
-export const languages = ["fr", "de", "gb"];
+export const languages = ["fr", "de", "en"];
 
 export default i18n;

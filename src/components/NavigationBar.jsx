@@ -36,7 +36,7 @@ function NavigationBar() {
     event.preventDefault();
     // event.persist();
     //event.stopPropagation();
-    eventKey == null ? (value = "gb") : (value = eventKey);
+    eventKey == null ? (value = "en") : (value = eventKey);
     changeLanguage(languages[value]);
     console.log("Langue -> " + i18n.language);
     setSelectedOption(value);
