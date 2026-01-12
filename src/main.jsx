@@ -1,7 +1,5 @@
 import React, { Suspense } from "react";
 import { createRoot } from "react-dom/client";
-//import "./index.css";
-// import i18n (needs to be bundled ;))
 import "./i18n";
 import NavigationBar from "./components/NavigationBar";
 import TopPage from "./components/TopPage";
