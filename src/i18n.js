@@ -20,7 +20,9 @@ i18n
     debug: true,
     backend: {
       loadPath:
-        import.meta.env.VITE_PUBLIC_BASE + "/locales/{{lng}}/translation.json",
+        "/" +
+        import.meta.env.VITE_PUBLIC_BASE +
+        "/locales/{{lng}}/translation.json",
     },
   });
 export const languages = ["fr", "de", "en"];
