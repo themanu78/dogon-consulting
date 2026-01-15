@@ -19,7 +19,8 @@ i18n
     fallbackLng: "en",
     debug: true,
     backend: {
-      loadPath: "/locales/{{lng}}/translation.json",
+      loadPath:
+        import.meta.env.VITE_PUBLIC_BASE + "/locales/{{lng}}/translation.json",
     },
   });
 export const languages = ["fr", "de", "en"];
