@@ -1,20 +1,13 @@
 import { defineConfig, loadEnv } from "vite";
-import react from "@vitejs/plugin-react";
+import { fileURLToPath } from "node:url";
+import path from "node:path";
 
-import dotenv from "dotenv";
-dotenv.config();
+const root = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd());
+  const env = loadEnv(mode, root);
 
   return {
-    base: "/" + env.VITE_PUBLIC_BASE,
+    base: env.VITE_PUBLIC_BASE,
   };
 });
-
-//export default defineConfig({
-//  plugins: [react()],
-// base: "/dogon-consulting",
-//base: import.meta.env.VITE_PUBLIC_BASE,
-//base: "/",
-//});
